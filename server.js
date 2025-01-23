@@ -19,4 +19,6 @@ mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTop
   .catch(err => console.log(err));
 
 const postRoutes = require('./routes/posts');
+const authRoutes = require('./routes/auth');
 app.use('/api/posts', postRoutes);
+app.use('/api/auth', authRoutes);
